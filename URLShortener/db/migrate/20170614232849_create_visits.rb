@@ -6,7 +6,7 @@ class CreateVisits < ActiveRecord::Migration[5.0]
       t.timestamps
     end
 
-    add_index :visits, :user_id, unique: true
+    add_index :visits, :user_id #unique: true
     add_index :visits, :shortened_url_id
   end
 end

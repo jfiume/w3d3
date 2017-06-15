@@ -10,7 +10,7 @@
 #
 
 class Visit < ApplicationRecord
-  validates :user_id, uniqueness: true
+  validates :user_id, presence: true
   validates :shortened_url_id, presence: true
 
   belongs_to :user,

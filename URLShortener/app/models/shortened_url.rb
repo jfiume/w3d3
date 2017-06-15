@@ -56,6 +56,6 @@ class ShortenedUrl < ApplicationRecord
   end
 
   def recent_uniques
-
+    visits.select { |v| v.created_at > 1.day.ago }
   end
 end
